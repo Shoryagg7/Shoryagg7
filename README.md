@@ -1,90 +1,95 @@
-# Hi, I'm Shorya Gupta 👋
+<div align="center">
 
-### Computer Science Engineering Student | Backend Engineering • Distributed Systems • GenAI
+# 👋 Hi, I'm Shorya Gupta
 
-I'm a final-year Computer Science Engineering student at **Thapar Institute of Engineering & Technology**, interested in building reliable backend systems and understanding how software behaves at scale.
+### Backend Engineering • Distributed Systems • GenAI
 
-I enjoy working on problems involving **backend architecture, databases, concurrency, distributed systems, and AI-powered applications**.
+Final-year Computer Science Engineering student at
+**Thapar Institute of Engineering & Technology**
+
+I enjoy building backend systems, understanding how they behave at scale,
+and exploring the intersection of **distributed systems and AI**.
+
+</div>
 
 ---
 
-## 🚀 What I'm Working On
+## 🚀 Featured Projects
+
+### 🚚 [DeliverIQ](https://github.com/Shoryagg7/deliveriq)
+
+**Scalable Distributed Order Dispatch API**
+
+A backend system designed to safely dispatch orders across concurrent workers while handling duplicate requests, failures, and asynchronous processing.
+
+`FastAPI` · `PostgreSQL` · `Redis` · `Kafka` · `Docker`
+
+**Engineering highlights**
+
+* Concurrent order claiming with `SELECT FOR UPDATE SKIP LOCKED`
+* Idempotency protection for duplicate requests
+* Kafka-based asynchronous event processing
+* Kafka consumer groups for scalable workers
+* Role-Based Access Control
+* PostgreSQL transactions and concurrency handling
+* Redis-backed caching and coordination
+
+---
 
 ### 🧠 DocMind
 
 **Agentic RAG Document Assistant — In Development**
 
-Building a document intelligence system that goes beyond simple question-answering by using retrieval, reasoning, and agentic workflows to work with documents.
+Building a document intelligence system focused on retrieval, reasoning, and agentic workflows.
 
 Currently exploring:
 
-* Retrieval-Augmented Generation (RAG)
-* Agentic workflows
-* Document retrieval and chunking
-* Embeddings and vector search
-* LLM orchestration
-* Evaluation and retrieval quality
-
----
-
-## 💻 Featured Project
-
-### 🚚 [DeliverIQ](https://github.com/Shoryagg7/deliveriq)
-
-**Scalable Order Dispatch API**
-
-A backend system designed to safely dispatch orders across multiple concurrent workers while handling retries, duplicate requests, and distributed processing.
-
-**Tech:** Python • FastAPI • PostgreSQL • Redis • Kafka
-
-Key engineering concepts:
-
-* ⚡ Concurrent order claiming using `SELECT FOR UPDATE SKIP LOCKED`
-* 🔁 Idempotency protection for duplicate requests
-* 📨 Kafka-based asynchronous event processing
-* 👥 Kafka consumer groups for scalable workers
-* 🔐 Role-Based Access Control (RBAC)
-* 🗄️ PostgreSQL transaction management
-* 🚀 Redis-backed caching and coordination
-* 🐳 Containerized development workflow
+`RAG` · `Vector Search` · `Embeddings` · `LLM Orchestration` · `Agentic Workflows`
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Languages**
+<div align="center">
 
-`C++` `Python` `SQL` `JavaScript`
+![C++](https://img.shields.io/badge/C++-111827?style=for-the-badge\&logo=cplusplus)
+![Python](https://img.shields.io/badge/Python-111827?style=for-the-badge\&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-111827?style=for-the-badge\&logo=fastapi)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-111827?style=for-the-badge\&logo=postgresql)
+![Redis](https://img.shields.io/badge/Redis-111827?style=for-the-badge\&logo=redis)
+![Apache Kafka](https://img.shields.io/badge/Kafka-111827?style=for-the-badge\&logo=apachekafka)
+![Docker](https://img.shields.io/badge/Docker-111827?style=for-the-badge\&logo=docker)
+![Git](https://img.shields.io/badge/Git-111827?style=for-the-badge\&logo=git)
 
-**Backend**
-
-`FastAPI` `REST APIs`
-
-**Databases & Infrastructure**
-
-`PostgreSQL` `Redis` `Kafka`
-
-**Tools**
-
-`Docker` `Git` `GitHub` `Linux`
-
-**Currently Exploring**
-
-`System Design` `Distributed Systems` `LLMs` `RAG` `Agentic AI`
+</div>
 
 ---
 
 ## 📚 Currently Learning
 
-I'm currently strengthening my understanding of:
-
 * 🏗️ High-Level System Design
 * 🧩 Object-Oriented Design & LLD
+* ⚙️ Operating Systems & Concurrency
 * 🌐 Computer Networks
 * 🗄️ Database Management Systems
-* ⚙️ Operating Systems & Concurrency
 * 🧠 Data Structures & Algorithms
-* 🤖 Generative AI & Agentic Systems
+* 🤖 Retrieval-Augmented Generation & Agentic AI
+
+---
+
+## 📊 GitHub Activity
+
+<div align="center">
+
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Shoryagg7&show_icons=true&hide_border=true&theme=github_dark&rank_icon=github" />
+
+<img width="49%" src="https://streak-stats.demolab.com?user=Shoryagg7&theme=github-dark-blue&hide_border=true" />
+
+</div>
+
+### Contribution Activity
+
+[![Shorya's GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Shoryagg7\&theme=github-compact\&hide_border=true\&area=true)](https://github.com/Shoryagg7)
 
 ---
 
@@ -94,20 +99,27 @@ I'm currently strengthening my understanding of:
 Backend Engineering
 Distributed Systems
 System Design
-Databases
-Concurrency
+Databases & Concurrency
 Generative AI
-Agentic AI
+Agentic Systems
 ```
 
 ---
 
-## 📫 Connect With Me
+## 🤝 Connect With Me
 
-* 💼 **LinkedIn:** [Add LinkedIn URL](YOUR_LINKEDIN_URL)
-* 🌐 **Portfolio:** [Add Portfolio URL](YOUR_PORTFOLIO_URL)
-* 📧 **Email:** [Add Email](mailto:YOUR_EMAIL)
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-111827?style=for-the-badge\&logo=linkedin)](YOUR_LINKEDIN_URL)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-111827?style=for-the-badge\&logo=vercel)](YOUR_PORTFOLIO_URL)
+[![Email](https://img.shields.io/badge/Email-Contact-111827?style=for-the-badge\&logo=gmail)](mailto:YOUR_EMAIL)
+
+</div>
 
 ---
 
-### 💡 Building systems to understand them — not just to make them work.
+<div align="center">
+
+### Building systems to understand them — not just to make them work.
+
+</div>
