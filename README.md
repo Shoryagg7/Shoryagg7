@@ -1,113 +1,71 @@
 # Hi, I'm Shorya Gupta 👋
 
-### Computer Science Engineering Student | Backend Engineering • Distributed Systems • GenAI
+Computer Science Engineering student at **Thapar Institute of Engineering and Technology**, interested in **backend engineering, databases, and Generative AI**.
 
-I'm a final-year Computer Science Engineering student at **Thapar Institute of Engineering & Technology**, interested in building reliable backend systems and understanding how software behaves at scale.
+I enjoy building systems and understanding the engineering decisions behind them — from APIs, databases, caching, and asynchronous processing to retrieval and LLM-based applications.
 
-I enjoy working on problems involving **backend architecture, databases, concurrency, distributed systems, and AI-powered applications**.
-
----
-
-## 🚀 What I'm Working On
-
-### 🧠 DocMind
-
-**Agentic RAG Document Assistant — In Development**
-
-Building a document intelligence system that goes beyond simple question-answering by using retrieval, reasoning, and agentic workflows to work with documents.
-
-Currently exploring:
-
-* Retrieval-Augmented Generation (RAG)
-* Agentic workflows
-* Document retrieval and chunking
-* Embeddings and vector search
-* LLM orchestration
-* Evaluation and retrieval quality
+- 💻 Primarily work with **C++, Python, SQL, and PostgreSQL**
+- 🏆 **Codeforces Expert** — Max Rating: 1687
+- ⚔️ **LeetCode Knight** — Peak Contest Rating: 2105
+- 🎓 B.E. Computer Science Engineering @ Thapar Institute
 
 ---
 
-## 💻 Featured Project
+## 🚀 Featured Projects
 
-### 🚚 [DeliverIQ](https://github.com/Shoryagg7/deliveriq)
+### 🚚 [DeliverIQ — Distributed Order Dispatch API](https://github.com/Shoryagg7/deliveriq)
 
-**Scalable Order Dispatch API**
+Backend system for assigning incoming delivery orders to available riders while supporting multiple API replicas and concurrent requests.
 
-A backend system designed to safely dispatch orders across multiple concurrent workers while handling retries, duplicate requests, and distributed processing.
+- Built REST APIs using **FastAPI and PostgreSQL**
+- Used **Redis** as shared state across multiple application replicas
+- Implemented an atomic **Token Bucket Rate Limiter** using Redis and Lua
+- Integrated **Kafka** for asynchronous order and dispatch events
+- Used PostgreSQL transactions and locking to prevent concurrent double-dispatch
+- Added application monitoring with **Prometheus and Grafana**
 
-**Tech:** Python • FastAPI • PostgreSQL • Redis • Kafka
-
-Key engineering concepts:
-
-* ⚡ Concurrent order claiming using `SELECT FOR UPDATE SKIP LOCKED`
-* 🔁 Idempotency protection for duplicate requests
-* 📨 Kafka-based asynchronous event processing
-* 👥 Kafka consumer groups for scalable workers
-* 🔐 Role-Based Access Control (RBAC)
-* 🗄️ PostgreSQL transaction management
-* 🚀 Redis-backed caching and coordination
-* 🐳 Containerized development workflow
+**Tech:** Python · FastAPI · PostgreSQL · Redis · Kafka · Docker · Prometheus · Grafana
 
 ---
 
-## 🛠️ Tech Stack
+### 📄 [DocMind — Agentic RAG Document Assistant](https://github.com/Shoryagg7/docmind)
 
-**Languages**
+Document question-answering system that retrieves relevant information from uploaded PDFs and generates answers grounded in source passages.
 
-`C++` `Python` `SQL` `JavaScript`
+- Built PDF ingestion, chunking, and embedding pipeline
+- Stored embeddings using **PostgreSQL + pgvector**
+- Implemented vector similarity search for relevant document retrieval
+- Built a **LangGraph** retrieval loop that evaluates retrieved context and retries poor searches
+- Added a Redis-backed semantic cache for similar repeat queries
 
-**Backend**
-
-`FastAPI` `REST APIs`
-
-**Databases & Infrastructure**
-
-`PostgreSQL` `Redis` `Kafka`
-
-**Tools**
-
-`Docker` `Git` `GitHub` `Linux`
-
-**Currently Exploring**
-
-`System Design` `Distributed Systems` `LLMs` `RAG` `Agentic AI`
+**Tech:** Python · LangGraph · PostgreSQL · pgvector · Redis · FastAPI · Sentence Transformers
 
 ---
 
-## 📚 Currently Learning
+## 🛠️ Technical Skills
 
-I'm currently strengthening my understanding of:
+**Languages:** C++, Python, SQL
 
-* 🏗️ High-Level System Design
-* 🧩 Object-Oriented Design & LLD
-* 🌐 Computer Networks
-* 🗄️ Database Management Systems
-* ⚙️ Operating Systems & Concurrency
-* 🧠 Data Structures & Algorithms
-* 🤖 Generative AI & Agentic Systems
+**Backend & Databases:** FastAPI, REST APIs, PostgreSQL, SQLAlchemy, Redis
+
+**Generative AI:** RAG, Embeddings, Vector Search, LangGraph, pgvector, LLM APIs
+
+**Tools:** Git, Docker, Linux, Prometheus, Grafana
 
 ---
 
-## 🎯 Areas of Interest
+## 🏆 Achievements
 
-```text
-Backend Engineering
-Distributed Systems
-System Design
-Databases
-Concurrency
-Generative AI
-Agentic AI
-```
+- **Codeforces Expert** — Max Rating: 1687
+- **LeetCode Knight** — Peak Contest Rating: 2105
+- **Runner-Up, SPHINX'24 Hackathon** — MNIT Jaipur
+- **Runner-Up, Inter-College Coding Contest** — Thapar Institute
+- **Merit Scholarship** — Thapar Institute
 
 ---
 
-## 📫 Connect With Me
+## 📫 Connect
 
-* 💼 **LinkedIn:** [Add LinkedIn URL](YOUR_LINKEDIN_URL)
-* 🌐 **Portfolio:** [Add Portfolio URL](YOUR_PORTFOLIO_URL)
-* 📧 **Email:** [Add Email](mailto:YOUR_EMAIL)
-
----
-
-### 💡 Building systems to understand them — not just to make them work.
+- 🌐 [Portfolio](https://shoryagg7.github.io/portfolio/)
+- 💼 [LinkedIn](https://linkedin.com/in/shoryag7)
+- 📧 [shoryag.gupta@gmail.com](mailto:shoryag.gupta@gmail.com)
