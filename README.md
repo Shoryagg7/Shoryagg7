@@ -1,71 +1,74 @@
-# Hi, I'm Shorya Gupta 👋
+<h1 align="center">Shorya Gupta</h1>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&center=true&vCenter=true&width=460&lines=Backend+engineering;Databases+and+distributed+systems;Applied+GenAI+with+real+evaluation">
+</p>
+<p align="center">
+  Backend · Databases · Applied GenAI &nbsp;|&nbsp; CSE @ Thapar Institute
+</p>
 
-Computer Science Engineering student at **Thapar Institute of Engineering and Technology**, interested in **backend engineering, databases, and Generative AI**.
+<p align="center">
+  <a href="https://codeforces.com/profile/Shoryagg7"><img src="https://img.shields.io/badge/Codeforces-Expert%201687-1F8ACB?style=flat-square&logo=codeforces&logoColor=white"></a>
+  <a href="https://leetcode.com/Shoryagg7/"><img src="https://img.shields.io/badge/LeetCode-Knight%202105-FFA116?style=flat-square&logo=leetcode&logoColor=white"></a>
+  <a href="https://linkedin.com/in/shoryag7"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"></a>
+  <a href="https://shoryagg7.github.io/portfolio/"><img src="https://img.shields.io/badge/Portfolio-000?style=flat-square&logo=githubpages&logoColor=white"></a>
+</p>
 
-I enjoy building systems and understanding the engineering decisions behind them — from APIs, databases, caching, and asynchronous processing to retrieval and LLM-based applications.
-
-- 💻 Primarily work with **C++, Python, SQL, and PostgreSQL**
-- 🏆 **Codeforces Expert** — Max Rating: 1687
-- ⚔️ **LeetCode Knight** — Peak Contest Rating: 2105
-- 🎓 B.E. Computer Science Engineering @ Thapar Institute
-
----
-
-## 🚀 Featured Projects
-
-### 🚚 [DeliverIQ — Distributed Order Dispatch API](https://github.com/Shoryagg7/deliveriq)
-
-Backend system for assigning incoming delivery orders to available riders while supporting multiple API replicas and concurrent requests.
-
-- Built REST APIs using **FastAPI and PostgreSQL**
-- Used **Redis** as shared state across multiple application replicas
-- Implemented an atomic **Token Bucket Rate Limiter** using Redis and Lua
-- Integrated **Kafka** for asynchronous order and dispatch events
-- Used PostgreSQL transactions and locking to prevent concurrent double-dispatch
-- Added application monitoring with **Prometheus and Grafana**
-
-**Tech:** Python · FastAPI · PostgreSQL · Redis · Kafka · Docker · Prometheus · Grafana
+I build backend systems and measure them instead of assuming they work. Most of what I find
+interesting sits in the failure modes — what breaks under concurrency, what a cache quietly
+gets wrong, what an evaluation number doesn't actually prove.
 
 ---
 
-### 📄 [DocMind — Agentic RAG Document Assistant](https://github.com/Shoryagg7/docmind)
+## Projects
 
-Document question-answering system that retrieves relevant information from uploaded PDFs and generates answers grounded in source passages.
+### [DocMind](https://github.com/Shoryagg7/docmind) — Privacy-aware, evaluated agentic RAG over PDFs
 
-- Built PDF ingestion, chunking, and embedding pipeline
-- Stored embeddings using **PostgreSQL + pgvector**
-- Implemented vector similarity search for relevant document retrieval
-- Built a **LangGraph** retrieval loop that evaluates retrieved context and retries poor searches
-- Added a Redis-backed semantic cache for similar repeat queries
+Ask questions about your PDFs. A LangGraph agent retrieves from pgvector, grades each chunk
+for relevance, rewrites the query and retries when retrieval comes back weak, then answers
+with citations. Because the LLM is external, every outbound message passes a local egress
+gate that swaps names, emails, phones, PAN and Aadhaar numbers for placeholders and restores
+them on this machine — and fails closed if detection errors.
 
-**Tech:** Python · LangGraph · PostgreSQL · pgvector · Redis · FastAPI · Sentence Transformers
+Measured, not asserted:
 
----
+| | |
+|---|---|
+| Retrieval recall@1 / MRR@5 | 19/27 · 0.840 |
+| Answer accuracy, privacy on vs off | 30/31 vs 29/31 (paired sign test p = 1.000) |
+| Cost of the privacy layer | +107 tokens, +0.28 s per question |
+| Relevance grading's share of tokens | 72.7% |
+| A statement vs its own negation | 0.87 similarity (vs 0.47 for unrelated text) |
 
-## 🛠️ Technical Skills
+The negation result is the one I'd talk about: a negated question scores **0.9879** against the
+original while the paraphrase the cache exists to serve scores **0.9399** — the case that must
+be rejected outscores the case that must be accepted, so no similarity threshold separates them.
 
-**Languages:** C++, Python, SQL
-
-**Backend & Databases:** FastAPI, REST APIs, PostgreSQL, SQLAlchemy, Redis
-
-**Generative AI:** RAG, Embeddings, Vector Search, LangGraph, pgvector, LLM APIs
-
-**Tools:** Git, Docker, Linux, Prometheus, Grafana
-
----
-
-## 🏆 Achievements
-
-- **Codeforces Expert** — Max Rating: 1687
-- **LeetCode Knight** — Peak Contest Rating: 2105
-- **Runner-Up, SPHINX'24 Hackathon** — MNIT Jaipur
-- **Runner-Up, Inter-College Coding Contest** — Thapar Institute
-- **Merit Scholarship** — Thapar Institute
+`Python` `FastAPI` `PostgreSQL + pgvector` `Redis` `LangGraph` `Presidio` `sentence-transformers` `Docker`
 
 ---
 
-## 📫 Connect
+### [DeliverIQ](https://github.com/Shoryagg7/deliveriq) — Distributed order dispatch API
 
-- 🌐 [Portfolio](https://shoryagg7.github.io/portfolio/)
-- 💼 [LinkedIn](https://linkedin.com/in/shoryag7)
-- 📧 [shoryag.gupta@gmail.com](mailto:shoryag.gupta@gmail.com)
+Assigns incoming delivery orders to available riders across multiple API replicas under
+concurrent load. Redis holds the state the replicas share, including a token-bucket rate
+limiter run as an atomic Lua script so one limit holds across all of them. Kafka carries
+order and dispatch events with consumer groups and at-least-once delivery, and PostgreSQL
+transactional locking stops two concurrent requests from assigning the same order.
+
+`Python` `FastAPI` `PostgreSQL` `SQLAlchemy` `Redis` `Kafka` `Docker` `Prometheus` `Grafana`
+
+---
+
+## Skills
+
+**Languages** C++ · Python · SQL
+**Backend** FastAPI · REST APIs · PostgreSQL · SQLAlchemy · Redis · Kafka
+**GenAI** RAG · embeddings · vector search · LangGraph · pgvector · evaluation
+**Tools** Git · Docker · Linux · Prometheus · Grafana
+
+## Achievements
+
+Codeforces Expert (1687) · LeetCode Knight (2105) · Runner-Up SPHINX'24, MNIT Jaipur ·
+Runner-Up Inter-College Coding Contest, Thapar · Merit Scholarship, Thapar
+
+📧 shoryag.gupta@gmail.com
