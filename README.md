@@ -38,9 +38,9 @@ them on this machine — and fails closed if detection errors.
 | Answer accuracy, privacy on vs off | 30/31 vs 29/31 — no measurable loss (paired sign test, p = 1.0) |
 | Cost of the privacy layer | +107 tokens, +0.28 s per question |
 | Relevance grading's share of tokens | 72.7% |
-| Statement vs its own negation (`[MODEL A]`) | 0.87 similarity (unrelated text: 0.47) |
+| Statement vs its own negation | 0.87 similarity (unrelated text: 0.47) |
 
-The negation result is the one I'd talk about: with `[MODEL B]` (the cache's embedder), a negated
+The negation result is the one I'd talk about: with (the cache's embedder), a negated
 question scores **0.9879** against the original while the paraphrase the cache exists to serve
 scores **0.9399**. The case that must be rejected outscores the case that must be accepted, so
 no similarity threshold separates them.
